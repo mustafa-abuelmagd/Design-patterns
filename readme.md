@@ -32,3 +32,5 @@ The Strategy design pattern is a behavioral design pattern that allows you to de
 - Different types of ducks share common behaviors but exhibit different displaying, swimming, and quacking behaviors.
 - Flying and quacking behaviors are encapsulated in separate classes/interfaces, allowing for dynamic switching of behaviors at runtime.
 
+## UML Representation
+![img.png](img.png)
