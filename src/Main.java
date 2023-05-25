@@ -1,17 +1,39 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import Ducks.*;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        IQuackBehavior NormalQuackBehavior = new NormalQuackBehavior();
+        IQuackBehavior NoQuackBehavior = new NoQuackBehavior();
+        IQuackBehavior SqueakQuackBehavior = new SqueakQuackBehavior();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        IDisplayBehavior NormalDisplayBehavior = new NormalDisplayBehavior();
+        IDisplayBehavior NoDisplayBehavior = new NoDisplayBehavior();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        ISwimBehavior NormalSwimBehavior = new NormalSwimBehavior();
+        ISwimBehavior NoSwimBehavior = new NoSwimBehavior();
+
+        ADuck[] duckCollection = new ADuck[4];
+
+        ADuck firstCityDuck = new ADuck("CityDuck", 1, "CityDuck", NormalQuackBehavior, NormalDisplayBehavior, NoSwimBehavior);
+        duckCollection[0] = firstCityDuck;
+        ADuck firstFarmDuck = new ADuck("FarmDuck", 1, "FarmDuck", NormalQuackBehavior, NormalDisplayBehavior, NormalSwimBehavior);
+        duckCollection[1] = firstFarmDuck;
+        ADuck firstYellowDuck = new ADuck("YellowDuck", 1, "YellowDuck", SqueakQuackBehavior, NoDisplayBehavior, NoSwimBehavior);
+        duckCollection[2] = firstYellowDuck;
+        ADuck firstWoodenDuck = new ADuck("WoodenDuck", 1, "WoodenDuck", NoQuackBehavior, NoDisplayBehavior, NoSwimBehavior);
+        duckCollection[3] = firstWoodenDuck;
+
+        for (ADuck duck : duckCollection) {
+            if (duck != null) {
+                duck.display();
+                duck.swim();
+                duck.quack();
+                System.out.println();
+            } else {
+                System.out.println("Duck doesn't exist yet");
+            }
         }
+
+
     }
 }
