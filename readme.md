@@ -29,6 +29,6 @@ The Strategy design pattern is a behavioral design pattern that allows you to de
 ## Duck Example
 
 - The Duck example is a famous example used to explain the Strategy pattern.
-- Different types of ducks share common behaviors but exhibit different flying and quacking behaviors.
+- Different types of ducks share common behaviors but exhibit different displaying, swimming, and quacking behaviors.
 - Flying and quacking behaviors are encapsulated in separate classes/interfaces, allowing for dynamic switching of behaviors at runtime.
 

@@ -1,6 +1,6 @@
 package Ducks;
 
-public class ADuck {
+public class Duck {
     String name;
     int age;
     String type;
@@ -8,7 +8,7 @@ public class ADuck {
     IDisplayBehavior DisplayBehavior;
     ISwimBehavior SwimBehavior;
 
-    public ADuck(String name,
+    public Duck(String name,
                  int age,
                  String type,
                  IQuackBehavior QuackBehavior,

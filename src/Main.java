@@ -12,18 +12,18 @@ public class Main {
         ISwimBehavior NormalSwimBehavior = new NormalSwimBehavior();
         ISwimBehavior NoSwimBehavior = new NoSwimBehavior();
 
-        ADuck[] duckCollection = new ADuck[4];
+        Duck[] duckCollection = new Duck[4];
 
-        ADuck firstCityDuck = new ADuck("CityDuck", 1, "CityDuck", NormalQuackBehavior, NormalDisplayBehavior, NoSwimBehavior);
+        Duck firstCityDuck = new Duck("CityDuck", 1, "CityDuck", NormalQuackBehavior, NormalDisplayBehavior, NoSwimBehavior);
         duckCollection[0] = firstCityDuck;
-        ADuck firstFarmDuck = new ADuck("FarmDuck", 1, "FarmDuck", NormalQuackBehavior, NormalDisplayBehavior, NormalSwimBehavior);
+        Duck firstFarmDuck = new Duck("FarmDuck", 1, "FarmDuck", NormalQuackBehavior, NormalDisplayBehavior, NormalSwimBehavior);
         duckCollection[1] = firstFarmDuck;
-        ADuck firstYellowDuck = new ADuck("YellowDuck", 1, "YellowDuck", SqueakQuackBehavior, NoDisplayBehavior, NoSwimBehavior);
+        Duck firstYellowDuck = new Duck("YellowDuck", 1, "YellowDuck", SqueakQuackBehavior, NoDisplayBehavior, NoSwimBehavior);
         duckCollection[2] = firstYellowDuck;
-        ADuck firstWoodenDuck = new ADuck("WoodenDuck", 1, "WoodenDuck", NoQuackBehavior, NoDisplayBehavior, NoSwimBehavior);
+        Duck firstWoodenDuck = new Duck("WoodenDuck", 1, "WoodenDuck", NoQuackBehavior, NoDisplayBehavior, NoSwimBehavior);
         duckCollection[3] = firstWoodenDuck;
 
-        for (ADuck duck : duckCollection) {
+        for (Duck duck : duckCollection) {
             if (duck != null) {
                 duck.display();
                 duck.swim();
